@@ -1,7 +1,9 @@
 import './style.css';
 import header from './header.js';
+import home from './home.js';
 
 document.body.appendChild(header());
+document.body.appendChild(home());
 
 const tabList = Array.from(document.querySelectorAll('.tab'));
 tabList.forEach((tab) => {

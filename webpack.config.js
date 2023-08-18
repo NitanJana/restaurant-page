@@ -10,11 +10,11 @@ module.exports = {
   
   entry: {
     index: './src/index.js',
-    header: './src/header.js',
+    
   },
 
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -37,7 +37,5 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    runtimeChunk: 'single',
-  },
+  
 };

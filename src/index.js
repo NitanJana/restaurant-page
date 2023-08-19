@@ -10,28 +10,27 @@ content.classList.add('content');
 document.body.appendChild(content);
 
 content.appendChild(home());
+document.querySelector('.tab').classList.add('active-tab');
 
 const tabList = Array.from(document.querySelectorAll('.tab'));
 tabList.forEach((tab) => {
   tab.addEventListener('click', (e) => {
+
+    content.innerHTML = "";
     if (e.target.textContent === 'Home') {
-      content.innerHTML = "";
       content.appendChild(home());
 
     } else if (e.target.textContent === 'Menu') {
-      content.innerHTML = "";
       content.appendChild(menu());
 
     } else if (e.target.textContent === 'About') {
-      content.innerHTML = "";
       content.appendChild(about());
 
-    }home
-
+    }
     tabList.forEach((item) => {
       item.classList.remove('active-tab');
     });
+
     tab.classList.add('active-tab');
-    console.log(e.target.textContent);
   })
 });

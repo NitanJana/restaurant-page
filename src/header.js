@@ -23,14 +23,9 @@ export default function header() {
   tab2.textContent = 'Menu';
   tab3.textContent = 'About';
   
-  header.appendChild(headingMain);
-  
-  tabList.appendChild(tab1);
-  tabList.appendChild(tab2);
-  tabList.appendChild(tab3);
-  
+  header.append(headingMain,navbar);
+  tabList.append(tab1,tab2,tab3);
   navbar.appendChild(tabList);
-  header.appendChild(navbar);
 
   return header;
  }
